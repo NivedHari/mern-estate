@@ -69,12 +69,23 @@ export const google = async (req, res, next) => {
       });
       newUser.save();
       const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET);
-      const { password: pass, ...rest } = user._doc;
+      const { password: pass, ...rest } = newUser._doc;
       res
         .cookie("access_token", token, { httpOnly: true })
         .status(200)
         .json(rest);
     }
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const signout = (req, res, next) => {
+  try {
+    res
+      .status(200)
+      .clearCookie("access_token")
+      .json("User has been logged out!");
   } catch (error) {
     next(error);
   }
