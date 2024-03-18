@@ -48,21 +48,21 @@ export default function SignUp() {
         <input
           type="text"
           placeholder="Username"
-          className="border p-3 rounded-lg"
+          className="border p-3 rounded-lg focus:outline-none"
           id="username"
           onChange={handleChange}
         ></input>
         <input
           type="text"
           placeholder="Email"
-          className="border p-3 rounded-lg"
+          className="border p-3 rounded-lg focus:outline-none"
           id="email"
           onChange={handleChange}
         ></input>
         <input
           type="password"
           placeholder="Password"
-          className="border p-3 rounded-lg"
+          className="border p-3 rounded-lg focus:outline-none"
           id="password"
           onChange={handleChange}
         ></input>
