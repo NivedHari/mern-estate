@@ -150,7 +150,7 @@ export default function Profile() {
   };
   return (
     <div className="p-3 max-w-lg mx-auto">
-      <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
+      <h1 className="text-3xl font-semibold text-center my-7 dark:text-slate-200">Profile</h1>
       <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
         <input
           onChange={(e) => setFile(e.target.files[0])}
@@ -183,7 +183,7 @@ export default function Profile() {
           id="username"
           placeholder="Username"
           defaultValue={currentUser.userName}
-          className="border p-3 rounded-lg focus:outline-none"
+          className="border p-3 rounded-lg focus:outline-none dark:text-black"
           onChange={handleChange}
         />
         <input
@@ -191,19 +191,19 @@ export default function Profile() {
           id="email"
           placeholder="Email"
           defaultValue={currentUser.email}
-          className="border p-3 rounded-lg focus:outline-none"
+          className="border p-3 rounded-lg focus:outline-none dark:text-black"
           onChange={handleChange}
         />
         <input
           type="password"
           id="password"
           placeholder="Password"
-          className="border p-3 rounded-lg focus:outline-none"
+          className="border p-3 rounded-lg focus:outline-none dark:text-black"
           onChange={handleChange}
         />
         <button
           disabled={loading}
-          className="bg-slate-700 text-white rounded-lg p-3 hover:opacity-95 disabled:opacity-80 text-lg"
+          className="bg-slate-700 dark:bg-slate-500 text-white rounded-lg p-3 hover:opacity-95 disabled:opacity-80 text-lg"
         >
           {loading ? "loading.." : "Update"}
         </button>
@@ -217,11 +217,11 @@ export default function Profile() {
       <div className="flex justify-between mt-5">
         <span
           onClick={handleDeleteUser}
-          className="text-red-700 cursor-pointer"
+          className="text-red-700 dark:text-red-500 cursor-pointer"
         >
           Delete Account
         </span>
-        <span onClick={handleSignOut} className="text-red-700 cursor-pointer">
+        <span onClick={handleSignOut} className="text-red-700 dark:text-red-500 cursor-pointer">
           Sign out
         </span>
       </div>
@@ -229,7 +229,7 @@ export default function Profile() {
       <p className="text-green-700 mt-5">
         {updateSuccess ? "Update Successfull !" : ""}
       </p>
-      <button onClick={handleShow} className="text-green-700 w-full">
+      <button onClick={handleShow} className="text-green-700 dark:text-green-500 w-full">
         Show Listings
       </button>
       <p className="text-red-700 mt-5">

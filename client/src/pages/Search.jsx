@@ -127,7 +127,7 @@ export default function Search() {
 
   return (
     <div className="flex flex-col md:flex-row">
-      <div className="p-7 border-b-2 md:border-r-2 md:min-h-screen">
+      <div className="p-7 border-b-2 dark:border-slate-700 md:border-r-2 md:min-h-screen">
         <form onSubmit={handleSubmit} className="flex flex-col gap-8">
           <div className="flex items-center gap-2">
             <label className="whitespace-nowrap font-semibold">
@@ -137,7 +137,7 @@ export default function Search() {
               type="text"
               id="searchTerm"
               placeholder="Search..."
-              className="border rounded-lg p-3 w-full"
+              className="border rounded-lg p-3 w-full dark:text-black"
               value={sidebarData.searchTerm}
               onChange={handleChange}
             ></input>
@@ -214,7 +214,7 @@ export default function Search() {
               onChange={handleChange}
               defaultValue={"created_at_desc"}
               id="sort_order"
-              className="border rounded-lg p-3"
+              className="border rounded-lg p-3 dark:text-black"
             >
               <option value="regularPrice_desc">Price high to low</option>
               <option value="regularPrice_asc">Price low to high</option>
@@ -228,7 +228,7 @@ export default function Search() {
         </form>
       </div>
       <div className="flex-1">
-        <h1 className="text-3xl font-semibold border-b p-3 text-slate-700 mt-5">
+        <h1 className="text-3xl font-semibold border-b dark:border-slate-700 p-3 text-slate-700 mt-5 dark:text-slate-300">
           Results :{" "}
         </h1>
         <div className="p-7 w-full flex flex-wrap gap-4">

@@ -149,7 +149,7 @@ export default function CreateListing() {
   };
   return (
     <main className="p-3 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-semibold text-center my-7">
+      <h1 className="text-3xl dark:text-slate-200 font-semibold text-center my-7">
         Create a Listing
       </h1>
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
@@ -158,7 +158,7 @@ export default function CreateListing() {
             type="text"
             placeholder="Name"
             id="name"
-            className="border p-3 rounded-lg focus:outline-none"
+            className="border p-3 rounded-lg focus:outline-none dark:text-black"
             maxLength="62"
             minLength="10"
             required
@@ -169,7 +169,7 @@ export default function CreateListing() {
             type="text"
             placeholder="Description"
             id="description"
-            className="border p-3 rounded-lg focus:outline-none"
+            className="border p-3 rounded-lg focus:outline-none dark:text-black"
             required
             onChange={handleChange}
             value={formData.description}
@@ -178,7 +178,7 @@ export default function CreateListing() {
             type="text"
             placeholder="Address"
             id="address"
-            className="border p-3 rounded-lg focus:outline-none"
+            className="border p-3 rounded-lg focus:outline-none dark:text-black"
             required
             onChange={handleChange}
             value={formData.address}
@@ -243,7 +243,7 @@ export default function CreateListing() {
                 min="1"
                 max="10"
                 required
-                className="p-3 border border-gray-300 rounded-lg"
+                className="p-3 border border-gray-300 rounded-lg dark:text-black"
                 onChange={handleChange}
                 value={formData.bedrooms}
               />
@@ -256,7 +256,7 @@ export default function CreateListing() {
                 min="1"
                 max="10"
                 required
-                className="p-3 border border-gray-300 rounded-lg"
+                className="p-3 border border-gray-300 rounded-lg dark:text-black"
                 onChange={handleChange}
                 value={formData.bathrooms}
               />
@@ -269,7 +269,7 @@ export default function CreateListing() {
                 min="50"
                 max="1000000"
                 required
-                className="p-3 border border-gray-300 rounded-lg"
+                className="p-3 border border-gray-300 rounded-lg dark:text-black"
                 onChange={handleChange}
                 value={formData.regularPrice}
               />
@@ -286,7 +286,7 @@ export default function CreateListing() {
                   min="0"
                   max="1000000"
                   required
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-gray-300 rounded-lg dark:text-black"
                   onChange={handleChange}
                   value={formData.discountedPrice}
                 />
@@ -301,7 +301,7 @@ export default function CreateListing() {
         <div className="flex flex-col flex-1 gap-4">
           <p className="font-semibold">
             Images:
-            <span className="font-normal text-gray-600 ml-2">
+            <span className="font-normal text-gray-600 dark:text-gray-400 ml-2">
               The first image will be the cover (max 6)
             </span>
           </p>
@@ -318,7 +318,7 @@ export default function CreateListing() {
               disabled={uploading}
               type="button"
               onClick={handleImageSubmit}
-              className="p-3 text-green-700 border border-green-700 rounded  hover:shadow-lg disabled:opacity-80"
+              className="p-3 text-green-700 border border-green-700 dark:border-green-500 dark:text-green-500 rounded  hover:shadow-lg disabled:opacity-80"
             >
               {uploading ? "Uploading..." : "Upload"}
             </button>
@@ -340,7 +340,7 @@ export default function CreateListing() {
                 <button
                   onClick={() => handleRemoveImage(index)}
                   type="button"
-                  className="p-3 text-red-700 rounded-lg hover:opacity-95 text-lg"
+                  className="p-3 text-red-700 dark:text-red-500 rounded-lg hover:opacity-95 text-lg"
                 >
                   Delete
                 </button>
@@ -348,7 +348,7 @@ export default function CreateListing() {
             ))}
           <button
             disabled={loading || uploading}
-            className="text-lg bg-slate-700 p-3 text-white rounded-lg hover:opacity-95 disabled:opacity-80 "
+            className="text-lg bg-slate-700 dark:bg-slate-600 p-3 text-white rounded-lg hover:opacity-95 disabled:opacity-80 "
           >
             {loading ? "Creating..." : "Create Listing"}
           </button>

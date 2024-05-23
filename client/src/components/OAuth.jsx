@@ -37,7 +37,7 @@ export default function OAuth() {
     <button
       type="button"
       onClick={handleGoogleClick}
-      className="bg-red-700 text-white p-3 text-lg rounded-lg flex items-center justify-center gap-3 hover:opacity-95"
+      className="bg-red-700 dark:bg-red-800 text-white p-3 text-lg rounded-lg flex items-center justify-center gap-3 hover:opacity-95"
     >
       <FaGoogle className="text-xl" />
       Continue with Google

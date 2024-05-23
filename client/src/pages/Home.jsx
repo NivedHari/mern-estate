@@ -47,16 +47,16 @@ export default function Home() {
   return (
     <div>
       <div className="flex flex-col gap-6 py-28 px-3 max-w-6xl mx-auto">
-        <h1 className="text-slate-700 font-bold text-3xl lg:text-6xl">
-          Find your next <span className="text-slate-500">perfect</span>
+        <h1 className="text-slate-700 font-bold text-3xl lg:text-6xl dark:text-slate-400">
+          Find your next <span className="text-slate-500 dark:text-slate-500">perfect</span>
           <br /> place with ease
         </h1>
-        <div className="text-gray-400 text-xs sm:text-sm">
+        <div className="text-gray-400 text-xs sm:text-sm dark:text-slate-400">
           PrimeEstate will help you find a premier destination for all your real
           estate needs.
         </div>
         <Link
-          className="text-xs sm:text-sm text-blue-800 font-bold hover:underline"
+          className="text-xs sm:text-sm text-blue-800 font-bold hover:underline dark:text-blue-500"
           to={"/search"}
         >
           Let's get Started
@@ -84,8 +84,8 @@ export default function Home() {
         {offerListings && offerListings.length > 0 && (
           <div className="">
             <div className="my-3">
-              <h2 className="text-2xl font-semibold text-slate-600">Recent offers</h2>
-              <Link className="text-sm text-blue-800 hover:underline" to={"/search?offer=true"}>Show more offers</Link>
+              <h2 className="text-2xl font-semibold text-slate-600 dark:text-slate-300">Recent offers</h2>
+              <Link className="text-sm text-blue-800 hover:underline dark:text-blue-500" to={"/search?offer=true"}>Show more offers</Link>
             </div>
             <div className="flex flex-wrap gap-4">
               {offerListings.map((listing) => (
@@ -99,8 +99,8 @@ export default function Home() {
         {rentListings && rentListings.length > 0 && (
           <div className="">
             <div className="my-3">
-              <h2 className="text-2xl font-semibold text-slate-600">Recent places for rent</h2>
-              <Link className="text-sm text-blue-800 hover:underline" to={"/search?type=rent"}>Show more places for rent</Link>
+              <h2 className="text-2xl font-semibold text-slate-600 dark:text-slate-300">Recent places for rent</h2>
+              <Link className="text-sm text-blue-800 hover:underline dark:text-blue-500" to={"/search?type=rent"}>Show more places for rent</Link>
             </div>
             <div className="flex flex-wrap gap-4">
               {rentListings.map((listing) => (
@@ -114,8 +114,8 @@ export default function Home() {
         {saleListings && saleListings.length > 0 && (
           <div className="">
             <div className="my-3">
-              <h2 className="text-2xl font-semibold text-slate-600">Recent places for sale</h2>
-              <Link className="text-sm text-blue-800 hover:underline" to={"/search?type=sale"}>Show more places for sale</Link>
+              <h2 className="text-2xl font-semibold text-slate-600 dark:text-slate-300">Recent places for sale</h2>
+              <Link className="text-sm text-blue-800 hover:underline dark:text-blue-500" to={"/search?type=sale"}>Show more places for sale</Link>
             </div>
             <div className="flex flex-wrap gap-4">
               {saleListings.map((listing) => (

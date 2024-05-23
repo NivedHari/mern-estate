@@ -52,20 +52,20 @@ export default function SignIn() {
         <input
           type="text"
           placeholder="Email"
-          className="border p-3 rounded-lg focus:outline-none"
+          className="border p-3 rounded-lg focus:outline-none dark:text-black"
           id="email"
           onChange={handleChange}
         ></input>
         <input
           type="password"
           placeholder="Password"
-          className="border p-3 rounded-lg focus:outline-none"
+          className="border p-3 rounded-lg focus:outline-none dark:text-black"
           id="password"
           onChange={handleChange}
         ></input>
         <button
           disabled={loading}
-          className="bg-slate-700 text-white p-3 text-lg rounded-lg  hover:opacity-95 disabled:opacity-80"
+          className="bg-slate-700 dark:bg-slate-500 text-white p-3 text-lg rounded-lg  hover:opacity-95 disabled:opacity-80"
         >
           {loading ? "Loading..." : "Sign In"}
         </button>
@@ -74,10 +74,10 @@ export default function SignIn() {
       <div className="flex gap-2 mt-5">
         <p>Dont have an account?</p>
         <Link to={"/sign-up"}>
-          <span className="text-blue-700">Sign up</span>
+          <span className="text-blue-700 dark:text-blue-400">Sign up</span>
         </Link>
       </div>
-      {error && <p className="text-red-500 mt-5">{error}</p>}
+      {error && <p className="text-red-500 dark:text-red-400 mt-5">{error}</p>}
     </div>
   );
 }
