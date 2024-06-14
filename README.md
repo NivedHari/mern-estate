@@ -1,4 +1,35 @@
 
+# PrimeEstate
+
+PrimeEstate is a real estate web application built using the MERN (MongoDB, Express.js, React, Node.js) stack. This project allows users to browse, search, and manage real estate listings. It includes features for user authentication, property management, and responsive design.
+
+
+
+## Features
+
+- User Authentication (Login, Register)
+- Property listings with details
+- Search functionality for properties
+- Create, Read, Update, and Delete (CRUD) operations for property management
+- Responsive design for various devices
+
+
+## Tech Stack
+
+**Frontend:**
+  - React
+  - Redux (for state management)
+  - Tailwind CSS (for styling)
+
+
+**Backend:**
+  - Node.js
+  - Express.js
+  - MongoDB (with Mongoose for object modeling)
+  - JWT (JSON Web Tokens for authentication)
+  - bcrypt (for password hashing)
+
+
 ## Installation
 
 To get a local copy up and running, follow these simple steps:
