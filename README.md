@@ -12,6 +12,7 @@ PrimeEstate is a real estate web application built using the MERN (MongoDB, Expr
 - Search functionality for properties
 - Create, Read, Update, and Delete (CRUD) operations for property management
 - Responsive design for various devices
+- Light/dark mode toggle
 
 
 ## Tech Stack
